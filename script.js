@@ -6,13 +6,17 @@ const lists = document.getElementById('todoList');
 let todoLists = [];
 
 function addItems(){
-	if (input.value!=="") {
-		todoLists.push(input.value);
+	if (inputBox.value!=="") {
+		todoLists.push(inputBox.value);
+		inputBox.value = "";
+		lists.innerHTML = todoLists
+		// lists.innerHTML = todoLists.map(list =>{
+		// 	`
+		// 		<li>${list}</li>
+		// 	`
+		// })
 	}
 }
 
-lists.innerHTML = todoLists.map(list =>{
-	`
-		<li>${list}</li>
-	`
-})
+
+// list.innerHTML = todoLists
