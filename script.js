@@ -9,14 +9,12 @@ function addItems(){
 	if (inputBox.value!=="") {
 		todoLists.push(inputBox.value);
 		inputBox.value = "";
-		lists.innerHTML = todoLists
-		// lists.innerHTML = todoLists.map(list =>{
-		// 	`
-		// 		<li>${list}</li>
-		// 	`
-		// })
+		lists.innerHTML = todoLists.map(list =>{
+			return (`
+				<li>${list}</li>
+			`)
+		})
 	}
 }
 
 
-// list.innerHTML = todoLists
